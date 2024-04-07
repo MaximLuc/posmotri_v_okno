@@ -12,6 +12,7 @@ html {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
+  text-align: center;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
@@ -42,7 +43,7 @@ ol {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin: 133px 7.6px;
+  margin: 133px 7.6px  0  7.6px ;
   align-items: flex-end;
   gap: 30px;
 }
@@ -118,6 +119,7 @@ ol {
 }
 
 .content__video-card-description-container {
+  vertical-align: top;
   flex-grow: 1;
   padding-left: 2px;
 }
