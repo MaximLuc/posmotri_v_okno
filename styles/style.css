@@ -38,9 +38,11 @@ ol {
 }
 
 .content {
+  width: 1140px;
   display: flex;
   text-align: center;
-  margin-top: 50px;
+  justify-content: center;
+  margin: 133px 7.6px;
   align-items: flex-end;
   gap: 30px;
 }
@@ -49,21 +51,35 @@ ol {
   width: 711px;
 }
 
-.result__video {
+.result__video-container {
+  position: relative;
+  margin-bottom: 18px;
   width: 711px;
+  height: 386px;
+}
+
+.result__video {
+  width: 100%;
+  height: 386px;
+  margin: 0;
+  object-fit: cover;
 }
 
 .search-form {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  /* padding-top: 16px; */
+  margin-bottom: 8px;
+  gap: 38px;
 }
 
 .content__details {
   width: inherit;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 26px;
 }
+
 
 .content__list {
   position: relative;
@@ -77,22 +93,14 @@ ol {
   display: none;
 }
 
-.result__video-container {
-  position: relative;
-  padding-bottom: 20px;
-  width: 711px;
-}
-
-.result__video {
-  width: inherit;
-}
-
 .content__list-item {
-  margin: 3px;
+  width: 394px;
+  height: 107px;
+  margin: 1px;
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 34px;
 }
 
 .content__list-item:active {
@@ -106,7 +114,7 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 180px;
+  width: 194px;
 }
 
 .content__video-card-description-container {
@@ -115,6 +123,7 @@ ol {
 }
 
 .search-form__fieldset-title {
+  text-align: left;
   white-space: nowrap;
   width: 51.4px;
   height: 22px;
@@ -124,7 +133,7 @@ ol {
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 .title {
@@ -133,7 +142,7 @@ ol {
   font-style: normal;
   font-weight: 700;
   font-size: 75px;
-  line-height: 94%;
+  line-height: 70px;
   text-transform: uppercase;
 }
 
@@ -182,20 +191,27 @@ ol {
   width: fit-content;
   padding: 0px 2px 2px 2px;
 }
-
+.search-form__checkbox-list{
+  text-align: start;
+  vertical-align: top;
+  display: flex;
+}
 .search-form__pseudo-checkbox {
   vertical-align: middle;
   position: relative;
   cursor: pointer;
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   background-color: transparent;
   border: 1px solid #fff;
 }
 
 .search-form__fieldset {
+  white-space: nowrap;
   border: none;
+  text-align: left;
+  /* width: 225px; */
 }
 
 .search-form__textfield {
@@ -248,7 +264,7 @@ ol {
 
 .button:focus-visible::after {
   content: "";
-  position: absolute;
+  /* position: absolute; */
   top: -3px;
   left: -3px;
   right: -3px;
@@ -257,9 +273,11 @@ ol {
 }
 
 .search-form__submit-button {
-  padding: 6px 73px;
+  padding: 6px 72px;
   height: 34px;
   margin-top: auto;
+  margin-left: -11px;
+  text-transform: none;
 }
 
 .more-button {
