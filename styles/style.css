@@ -57,7 +57,6 @@ ol {
   position: relative;
   margin-bottom: 12px;
   width: 711px;
-  /* height: 386px; */
 }
 
 .result__video {
@@ -89,17 +88,12 @@ ol {
   height: 300px;
   overflow-y: scroll;
   overflow-x: hidden;
-  /* scrollbar-width: none; */
-  /* -ms-overflow-style: none; */
 }
 
-/* .content__list::-webkit-scrollbar {
-  display: none;
-} */
+
 
 .content__list-item {
   width: 394px;
-  /* height: 107px; */
   margin: 1px;
 }
 
@@ -236,7 +230,6 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  /* color: rgba(255, 255, 255, 0.7); */
   color :#fff;
   width: 225px;
 }
@@ -271,11 +264,10 @@ ol {
 }
 
 .button:focus-visible{
-  /* outline: 1px solid #fff; */
-  outline: none; /* Убираем стандартный фокусовой контур */
+  outline: none; 
   box-shadow: 
-    0 0 0 2px #1b1919 ,/* Внутренняя тень, создающая дополнительную рамку */
-    0 0 0 3px white; /* Внутренняя тень с отрицательным смещением */
+    0 0 0 2px #1b1919 ,
+    0 0 0 3px white; 
 }
 
 .button:active {
@@ -286,14 +278,7 @@ ol {
   text-decoration: underline;
 }
 
-/* .button:focus-visible::after {
-  content: "";
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border: 1px solid #fff;
-} */
+
 
 .search-form__submit-button {
   padding: 6px 72px;
@@ -336,11 +321,7 @@ ol {
 .search-form__checkbox:focus {
   outline: none;
 }
-/* 
-.search-form__label:has(:focus-visible) {
-  outline: none;
-  border: 1px solid #fff;
-} */
+
 
 .search-form__label:hover > .search-form__label-text {
   text-decoration: underline;
