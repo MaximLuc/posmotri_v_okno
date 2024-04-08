@@ -46,7 +46,7 @@ ol {
   text-align: center;
   justify-content: center;
   align-items: flex-end;
-  gap: 30px;
+  gap: 29px;
 }
 
 .result {
@@ -55,9 +55,9 @@ ol {
 
 .result__video-container {
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   width: 711px;
-  height: 386px;
+  /* height: 386px; */
 }
 
 .result__video {
@@ -65,38 +65,41 @@ ol {
   height: 386px;
   margin: 0;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
   display: flex;
   justify-content: start;
-  margin-bottom: 8px;
-  gap: 38px;
+  margin-bottom: 0px;
+  gap: 34px;
 }
 
 .content__details {
   width: inherit;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
 }
 
 
 .content__list {
+  padding: 2px;
   position: relative;
   height: 300px;
   overflow-y: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  overflow-x: hidden;
+  /* scrollbar-width: none; */
+  /* -ms-overflow-style: none; */
 }
 
-.content__list::-webkit-scrollbar {
+/* .content__list::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .content__list-item {
   width: 394px;
-  height: 107px;
+  /* height: 107px; */
   margin: 1px;
 }
 
@@ -110,8 +113,18 @@ ol {
 
 .content__video-card {
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: space-between;
+}
+
+.content__video-card:focus {
+  outline: none;
+}
+
+.content__video-card:focus-visible {
+  outline: 1px solid #fff;
+  border-radius: 0;
+  outline-offset: -20px;
 }
 
 .content__video-card-thumbnail {
@@ -134,13 +147,13 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 4px;
 }
 
 .title {
   text-align: left;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 75px;
@@ -156,27 +169,21 @@ ol {
   text-decoration: none;
   color: #fff;
   text-align: left;
+  display: block;
+
 }
 
 .content__video-card-title {
+  padding-top: 4px;
   padding-bottom: 6px;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
   color: #fff;
-}
-
-.content__video-card-description {
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 16.2px;
-  color: #fff;
-  text-decoration: none;
+  vertical-align: top;
 }
 
 .visually-hidden {
@@ -191,18 +198,21 @@ ol {
 
 .search-form__label {
   width: fit-content;
-  padding: 0px 2px 2px 2px;
+  padding: 2px 2px 0px 2px;
 }
+
 .search-form__checkbox-list{
   text-align: start;
   vertical-align: top;
   display: flex;
 }
+
+
 .search-form__pseudo-checkbox {
-  vertical-align: middle;
-  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  display: inline-block;
   width: 19px;
   height: 19px;
   background-color: transparent;
@@ -212,7 +222,7 @@ ol {
 .search-form__fieldset {
   white-space: nowrap;
   border: none;
-  text-align: left;
+  text-align: center;
 }
 
 .search-form__textfield {
@@ -226,22 +236,26 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: rgba(255, 255, 255, 0.7);
+  /* color: rgba(255, 255, 255, 0.7); */
+  color :#fff;
   width: 225px;
 }
 
 .search-form__label-text {
   cursor: pointer;
-  vertical-align: middle;
-  padding-right: 10px;
+  vertical-align: top;
+
 }
+.search-form__label:not(:last-child) .search-form__label-text{
+  padding-right: 12px;
+}
+
 
 .button {
   position: relative;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid #fff;
-  text-transform: uppercase;
+  border: 1px solid currentColor;
   font-family: "Fira Sans Condensed", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -249,10 +263,19 @@ ol {
   text-align: center;
   line-height: 22px;
   color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible{
+  /* outline: 1px solid #fff; */
+  outline: none; /* Убираем стандартный фокусовой контур */
+  box-shadow: 
+    0 0 0 2px #1b1919 ,/* Внутренняя тень, создающая дополнительную рамку */
+    0 0 0 3px white; /* Внутренняя тень с отрицательным смещением */
 }
 
 .button:active {
@@ -263,25 +286,25 @@ ol {
   text-decoration: underline;
 }
 
-.button:focus-visible::after {
+/* .button:focus-visible::after {
   content: "";
   top: -3px;
   left: -3px;
   right: -3px;
   bottom: -3px;
   border: 1px solid #fff;
-}
+} */
 
 .search-form__submit-button {
   padding: 6px 72px;
   height: 34px;
   margin-top: auto;
-  margin-left: -11px;
+  margin-left: 5px;
   text-transform: none;
 }
 
 .more-button {
-  width: 100%;
+  width: 98%;
   padding: 5px;
 }
 
@@ -292,17 +315,15 @@ ol {
 .search-form__label:has(:focus-visible) {
   outline: none;
   border: 1px solid #fff;
-  padding: 3px 1px;
+  padding: 1px 1px 0px 1px; 
 }
 
 .search-form__pseudo-checkbox::after {
   content: "";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1px 1px;
-  width: 16px;
-  height: 16px;
+  display:inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
   background-color: #fff;
   opacity: 0;
   transition: opacity 0.1s ease;
@@ -315,28 +336,37 @@ ol {
 .search-form__checkbox:focus {
   outline: none;
 }
-
+/* 
 .search-form__label:has(:focus-visible) {
   outline: none;
   border: 1px solid #fff;
-}
+} */
 
 .search-form__label:hover > .search-form__label-text {
   text-decoration: underline;
 }
 
-.content__card-link {
-  display: block;
-}
+
 
 .content__card-link_current {
   background-color: rgba(84, 80, 80, 1);
 }
 
-.content__list-item:hover > a > article > div > .content__video-card-title,
 .content__video-card-description {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.content__list-item:hover > a > article > div > .content__video-card-title,
+.content__list-item:hover > a > article > div > .content__video-card-description {
   text-decoration: underline;
 }
+
 
 .content__card-link:focus {
   outline: none;
